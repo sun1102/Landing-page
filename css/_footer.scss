@@ -1,0 +1,123 @@
+.footer {
+  background-color: $footerBg;
+  font-size: 1rem;
+  padding-top: 200px;
+
+  a:hover {
+    text-decoration: underline;
+  }
+  .container {
+    display: grid;
+    grid-row-gap: 35px;
+    grid-column-gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-areas: "logo" "address" "contact" "links1" "links2" "social";
+
+    @include breakpoint(medium) {
+      grid-column-gap: 25px;
+    }
+
+    @include breakpoint(large) {
+      grid-column-gap: 35px;
+      grid-template-columns: 3fr 2fr 2fr 2fr auto;
+      grid-template-rows: 60px 1fr;
+      grid-template-areas: "logo logo logo logo logo" "address contact links1 links2 social";
+    }
+
+    @include breakpoint(xlarge) {
+      grid-column-gap: 60px;
+    }
+  }
+
+  &__logo {
+    @include breakpoint(large) {
+      grid-area: logo;
+    }
+  }
+
+  &__address {
+    grid-area: address;
+    display: flex;
+    gap: 20px;
+    svg {
+      flex: 0 0 13px;
+      margin-top: 3px;
+    }
+  }
+
+  &__contact {
+    grid-area: contact;
+
+    @include breakpoint(large) {
+      justify-self: right;
+    }
+
+    a {
+      font-size: 0.875rem;
+    }
+
+    &--phone,
+    &--email {
+      display: flex;
+    }
+
+    &--phone {
+      margin-bottom: 20px;
+    }
+
+    &--phone {
+      svg {
+        width: 18px;
+        margin-right: 20px;
+      }
+    }
+
+    &--email {
+      svg {
+        width: 20px;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__links1,
+  &__links2 {
+    a {
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__links1 {
+    grid-area: links1;
+
+    @include breakpoint(large) {
+      justify-self: right;
+    }
+  }
+
+  &__links2 {
+    grid-area: links2;
+  }
+
+  &__social {
+    grid-area: social;
+    justify-self: center;
+
+    @include breakpoint(medium) {
+      justify-self: left;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+
+    a svg {
+      height: 35px;
+      width: 35px;
+      padding: 7px;
+      margin-right: 16px;
+      border: 1px solid #fff;
+      border-radius: $border-radius-circle;
+    }
+  }
+}

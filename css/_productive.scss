@@ -1,0 +1,41 @@
+.productive {
+    &__grid {
+       display: grid;
+       align-items: center;
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+        max-width: 600px;
+        margin: 0 auto;
+
+       @include breakpoint(large) {
+           grid-template-columns: repeat(2, 2fr);
+           max-width: 1320px; // design size 1200 + 60px padding left and right --> 1200 + 120px total
+       }
+    }
+
+    &__image {
+        text-align: center;
+
+        img {
+            width: 100%;
+            max-width: 615px;
+        }
+    }
+
+    &__text {
+
+        h2 {
+            @include breakpoint(large) {
+                max-width: 400px;
+            }
+        }
+
+        a {
+            background: url(/images/icon-arrow.svg) no-repeat;
+            background-position: right center;
+            padding-right: 25px;
+            text-decoration: underline;
+            color: $cta-blue;
+        }
+    }
+ }
