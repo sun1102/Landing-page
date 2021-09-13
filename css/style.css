@@ -357,7 +357,7 @@ input[type="text"], input[type="email"] {
 }
 
 .quotes__grid:first-child::before {
-  content: url(/images/bg-quotes.png);
+  content: url(../images/bg-quotes.png);
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
   width: 30px;

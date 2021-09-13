@@ -15,7 +15,7 @@
         }
 
         &:first-child::before {
-            content: url(/images/bg-quotes.png);
+            content: url(../images/bg-quotes.png);
             transform: scale(.7);
             width: 30px;
             height: 45px;
