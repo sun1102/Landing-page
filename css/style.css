@@ -177,7 +177,7 @@ input[type="text"], input[type="email"] {
   height: 40vw;
   position: absolute;
   bottom: 0;
-  background-image: url(/images/bg-curvy-mobile.svg);
+  background-image: url(.././images/bg-curvy-mobile.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -186,7 +186,7 @@ input[type="text"], input[type="email"] {
 
 @media screen and (min-width: 899px) {
   .hero:after {
-    background-image: url(/images/bg-curvy-desktop.svg);
+    background-image: url(.././images/bg-curvy-desktop.svg);
     height: 33vw;
   }
 }
@@ -326,7 +326,7 @@ input[type="text"], input[type="email"] {
 }
 
 .productive__text a {
-  background: url(/images/icon-arrow.svg) no-repeat;
+  background: url(.././images/icon-arrow.svg) no-repeat;
   background-position: right center;
   padding-right: 25px;
   text-decoration: underline;
