@@ -9,7 +9,8 @@ button, .button {
     width: 100%;
     cursor: pointer;
     text-align: center;
-
+    font-family: $font-body;
+    
     @include breakpoint(medium) {
         max-width: 200px;
     }
